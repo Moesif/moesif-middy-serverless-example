@@ -1,12 +1,11 @@
-require('dotenv').config();
-const moesif = require('moesif-aws-lambda');
-//const middy = require('@middy/core');
+import moesif from 'moesif-aws-lambda';
+import middy from '@middy/core';
+import 'dotenv/config';
 
 const moesifOptions = {
   application_id: process.env.MOESIF_APPLICATION_ID,
   logBody: true
 };
-
 
 const hello = async (event, context, callback) => {
   callback(null, {
@@ -20,4 +19,4 @@ const hello = async (event, context, callback) => {
   });
 };
 
-exports.hello = moesif(moesifOptions, hello);
+export const lambdaHandler = middy().use(moesif(moesifOptions)).handler(hello);

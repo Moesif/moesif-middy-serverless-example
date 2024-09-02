@@ -11,8 +11,8 @@ provider:
   region: us-east-1
 
 functions:
-  hello:
-    handler: handler.hello
+  lambdaHandler:
+    handler: handler.lambdaHandler
     events:
       - httpApi:
           path: /
