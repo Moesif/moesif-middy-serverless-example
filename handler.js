@@ -1,6 +1,7 @@
 import moesif from 'moesif-aws-lambda';
 import middy from '@middy/core';
 import inputOutputLogger from '@middy/input-output-logger';
+import httpSecurityHeaders from '@middy/http-security-headers';
 import 'dotenv/config';
 
 const moesifOptions = {
@@ -12,7 +13,7 @@ const hello = async (event, context) => {
   const response = {
     statusCode: 200,
     body: JSON.stringify({
-      message: "Go Serverless v4! Your function executed successfully!",
+      message: "Hello from Moesif, Middy, and Serverless! Your function executed successfully!",
     }),
     headers: {
       'Content-Type': 'application/json'
@@ -23,5 +24,8 @@ const hello = async (event, context) => {
 
 export const lambdaHandler = moesif(
   moesifOptions, 
-  middy().use(inputOutputLogger()).handler(hello)
+  middy()
+    .use(httpSecurityHeaders())
+    .use(inputOutputLogger())
+  .handler(hello)
 );
