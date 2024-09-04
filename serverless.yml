@@ -11,9 +11,9 @@ provider:
   region: us-east-1
 
 functions:
-  lambdaHandler:
-    handler: handler.lambdaHandler
+  greetingsHandler:
+    handler: handler.lambdaHandler 
     events:
       - httpApi:
-          path: /
-          method: get
+          path: /greet
+          method: post
