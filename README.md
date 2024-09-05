@@ -15,7 +15,7 @@ The example uses the following Middy middlewares:
 
 - [`http-security-headers`](https://middy.js.org/docs/middlewares/http-security-headers)
 - [`http-json-body-parser`](https://middy.js.org/docs/middlewares/http-json-body-parser)
-- [`validator`](https://middy.js.org/docs/middlewares/http-json-body-parser)
+- [`validator`](https://middy.js.org/docs/middlewares/validator/)
 - [`http-error-handler`](https://middy.js.org/docs/middlewares/http-error-handler)
 
 
