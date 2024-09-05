@@ -35,7 +35,7 @@ The AWS Lambda function and the API logic lives inside `handler.js`. The `server
 Before running this example, make sure you have performed the following steps:
 
 - [Have an active Moesif account](https://moesif.com/wrap)
-- [Have your Moesif Application ID](https://www.moesif.com/docs/server-integration/aws-lambda-nodejs/#get-your-moesif-application-id#get-your-moesif-application-id)
+- [Have your Moesif Application ID](https://www.moesif.com/docs/server-integration/aws-lambda-nodejs/#get-your-moesif-application-id)
 - [Set up Serverless with with your AWS account](https://www.serverless.com/framework/docs/getting-started)
 
 ### CommonJS and ECMAScript modules
