@@ -1,5 +1,5 @@
 # moesif-middy-serverless-example
-This examples demonstrates how to use [Moesif AWS Lambda middleware for Node.js](https://www.moesif.com/docs/server-integration/aws-lambda-nodejs/) with [Middy](https://www.moesif.com/docs/server-integration/aws-lambda-nodejs/) and [Serverless Framework](https://serverless.com).
+This examples demonstrates how to use [Moesif AWS Lambda middleware for Node.js](https://www.moesif.com/docs/server-integration/aws-lambda-nodejs/) with [Middy](https://middy.js.org/) and [Serverless Framework](https://serverless.com).
 
 ## Overview
 This example builds and deploys a simple HTTP API to AWS using Serverless right from your terminal. The API has a single valid endpoint `greet/` that expects `POST` requests. A valid `POST` request body looks like the following:
